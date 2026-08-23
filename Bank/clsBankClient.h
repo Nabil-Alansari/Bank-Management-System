@@ -393,10 +393,10 @@ public:
 				return enSaveResult::scSucceeded;
 			}
 
-			return svFalidEmptyObject;
+
 
 		}
-
+			return svFalidEmptyObject;
 	}
 
 	static clsBankClient GetAddNewClientObject(string AccountNumber) {
@@ -500,8 +500,6 @@ public:
 		}
 
 
-		Withdraw(Amount);
-		DestinationClient.Deposit(Amount);
 		_RegisterTransferLog(Amount, DestinationClient, CurrentUser.UserName);
 		return true;
 	}
