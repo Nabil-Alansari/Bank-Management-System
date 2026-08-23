@@ -391,11 +391,9 @@ public:
 
 				_Mode = UpdateMode;
 				return enSaveResult::scSucceeded;
-				break;
 			}
 
-			
-
+			return svFalidEmptyObject;
 
 		}
 
@@ -486,18 +484,26 @@ public:
 
     bool Transfer(double Amount, clsBankClient& DestinationClient) {
 
-		if (Amount > AccountBalance) {
-
+		if (Amount <= 0 || Amount > AccountBalance)
+		{
 			return false;
 		}
-		else {
 
-			Withdraw(Amount);
-			DestinationClient.Deposit(Amount);
-			_RegisterTransferLog(Amount, DestinationClient, CurrentUser.UserName);
-			return true;
-
+		if (!Withdraw(Amount))
+		{
+			return false;
 		}
+
+		if (!DestinationClient.Deposit(Amount))
+		{
+			return false;
+		}
+
+
+		Withdraw(Amount);
+		DestinationClient.Deposit(Amount);
+		_RegisterTransferLog(Amount, DestinationClient, CurrentUser.UserName);
+		return true;
 	}
 
 	static vector <stTransferLog> GetTransfetRegisterLogList() {

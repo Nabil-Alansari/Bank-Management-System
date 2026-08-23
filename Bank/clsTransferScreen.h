@@ -95,6 +95,14 @@ public:
 
 		double Amount = _ReadAmount(SourceClient);
 
+		while (Amount <= 0 || Amount > SourceClient.AccountBalance)
+		{
+			cout << "\nInvalid amount, enter an amount greater than zero "
+				"and within the available balance: ";
+
+			Amount = clsInputValidate<double>::ReadNumber();
+		}
+
 
 		char Answer = 'n';
 		

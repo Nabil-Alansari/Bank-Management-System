@@ -317,6 +317,8 @@ public :
 				 return scSucceeded;
 
 			 }
+
+			 return svFalidEmptyObject;
 		 }
 	 }
 

@@ -3,6 +3,7 @@
 #include <string>
 #include "clsString.h"
 #include "clsDate.h"
+#include <limits>
 
 template <class T>
 
@@ -43,7 +44,7 @@ public:
 
 	}
 
-	T static IsNumberBetween(T Number, T From, T To)
+	bool static IsNumberBetween(T Number, T From, T To)
 	{
 		if (Number >= From && Number <= To)
 			return true;
