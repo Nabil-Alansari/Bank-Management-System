@@ -467,6 +467,7 @@ public:
 		else {
 			_AccountBalance += Amount;
 			Save();
+			return true;
 		}
 	}
 

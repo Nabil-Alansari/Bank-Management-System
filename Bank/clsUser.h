@@ -171,7 +171,6 @@ public :
 
 		string DateTime;
 		string Username;
-		string Password;
 		int Permissions;
 
 	};

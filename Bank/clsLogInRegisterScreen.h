@@ -12,7 +12,6 @@ private:
 
 		cout << setw(8) << left << "" << " | " << setw(37) << left << LogInRegister.DateTime;
 		cout << "| " << setw(23) << left << LogInRegister.Username;
-		cout << "| " << setw(22) << left << "**************";
 		cout << "| " << setw(20) << left << LogInRegister.Permissions;
 		cout << endl;
 
@@ -42,7 +41,6 @@ public:
 		cout << "-------------------------------------------------------\n\n";
 		cout << setw(8) << left << "" << " | " << left << setw(37) << "Date/Time";
 		cout << "| " << left << setw(23) << "UserName";
-		cout << "| " << left << setw(22) << "Password";
 		cout << "| " << left << setw(20) << "Permissions";
 		cout << "\n\n";
 		cout << setw(8) << left << "" << "----------------------------------------------------";
