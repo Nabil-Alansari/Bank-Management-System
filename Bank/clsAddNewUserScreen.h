@@ -61,7 +61,7 @@ private :
 		cout << "\nDo you want to give full access? y/n ? ";
 		cin >> Answer; 
 
-		if (Answer == 'y' || Answer == 'y') {
+		if (Answer == 'y' || Answer == 'Y') {
 
 			return -1;
 		}
@@ -69,7 +69,7 @@ private :
 		cout << "\nShow Client List? y/n ? ";
 		cin >> Answer;
 
-		if (Answer == 'y' || Answer == 'y') {
+		if (Answer == 'y' || Answer == 'Y') {
 
 			Permissions += clsUser::enPermissions::pListClient;
 		}
@@ -77,7 +77,7 @@ private :
 		cout << "\nAdd New Client? y/n ? ";
 		cin >> Answer;
 
-		if (Answer == 'y' || Answer == 'y') {
+		if (Answer == 'y' || Answer == 'Y') {
 
 			Permissions += clsUser::enPermissions::pAddNewClient;
 		}
@@ -85,7 +85,7 @@ private :
 		cout << "\nDelete Client? y/n ? ";
 		cin >> Answer;
 
-		if (Answer == 'y' || Answer == 'y') {
+		if (Answer == 'y' || Answer == 'Y') {
 
 			Permissions += clsUser::enPermissions::pDeleteClient;
 		}
@@ -93,7 +93,7 @@ private :
 		cout << "\nUpdate Client? y/n ? ";
 		cin >> Answer;
 
-		if (Answer == 'y' || Answer == 'y') {
+		if (Answer == 'y' || Answer == 'Y') {
 
 			Permissions += clsUser::enPermissions::pUpdateClient;
 		}
@@ -101,7 +101,7 @@ private :
 		cout << "\nFind Client? y/n ? ";
 		cin >> Answer;
 
-		if (Answer == 'y' || Answer == 'y') {
+		if (Answer == 'y' || Answer == 'Y') {
 
 			Permissions += clsUser::enPermissions::pFindClient;
 		}
@@ -109,7 +109,7 @@ private :
 		cout << "\nTransaction? y/n ? ";
 		cin >> Answer;
 
-		if (Answer == 'y' || Answer == 'y') {
+		if (Answer == 'y' || Answer == 'Y') {
 
 			Permissions += clsUser::enPermissions::pTransactions;
 		}
@@ -117,7 +117,7 @@ private :
 		cout << "\nMange Users? y/n ? ";
 		cin >> Answer;
 
-		if (Answer == 'y' || Answer == 'y') {
+		if (Answer == 'y' || Answer == 'Y') {
 
 			Permissions += clsUser::enPermissions::pMangeUsers;
 		}
