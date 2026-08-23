@@ -12,7 +12,7 @@ private:
 
 		cout << setw(8) << left << "" << " | " << setw(37) << left << LogInRegister.DateTime;
 		cout << "| " << setw(23) << left << LogInRegister.Username;
-		cout << "| " << setw(22) << left << LogInRegister.Password;
+		cout << "| " << setw(22) << left << "**************";
 		cout << "| " << setw(20) << left << LogInRegister.Permissions;
 		cout << endl;
 

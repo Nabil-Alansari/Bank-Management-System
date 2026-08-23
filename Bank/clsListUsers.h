@@ -15,7 +15,7 @@ private:
 		cout << "| " << setw(20) << left << User.FullName();
 		cout << "| " << setw(12) << left << User.GetPhone();
 		cout << "| " << setw(20) << left << User.GetEmail();
-		cout << "| " << setw(16) << left << User.GetPassword();
+		cout << "| " << setw(16) << left << "**************";
 		cout << "| " << setw(6) << left << User.GetPermissions();
 	}
 

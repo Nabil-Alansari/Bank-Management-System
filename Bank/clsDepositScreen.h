@@ -21,7 +21,7 @@ private:
 		cout << "\nEmail       : " << Client.Email;
 		cout << "\nPhone       : " << Client.Phone;
 		cout << "\nAcc. Number : " << Client.GetAccountNumber();
-		cout << "\nPassword    : " << Client.PinCode;
+		cout << "\nPassword    : " << "************";
 		cout << "\nBalance     : " << Client.AccountBalance;
 		cout << "\n---------------------------------";
 		cout << endl;
@@ -60,10 +60,16 @@ public:
 
 		if (Answer == 'Y' || Answer == 'y') {
 
-			Client.Deposit(Amount);
+			if (Client.Deposit(Amount)) {
 
-			cout << "\nAmount Deposited Successfully.\n";
-			cout << "\nNew Balance Is: " << Client.AccountBalance;
+				cout << "\nAmount Deposited Successfully.\n";
+				cout << "\nNew Balance Is: " << Client.AccountBalance;
+			}
+			else {
+
+				cout << "\nInvalid deposit amount. Amount must be greater than zero.\n";
+			}
+
 		}
 		else {
 
