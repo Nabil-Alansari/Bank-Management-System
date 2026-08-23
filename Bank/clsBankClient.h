@@ -326,25 +326,24 @@ public:
 
 	static clsBankClient Find(string AccountNumber ,string PinCode) {
 
-		vector <clsBankClient> vClinet;
 		fstream MyFile;
 
-		MyFile.open("Clinets.text", ios::in);
+		MyFile.open("Clients.text", ios::in);
 
 		if (MyFile.is_open()) {
 
 			string Line;
 
-			clsBankClient Clinet = _ConvertLineToClinetObject(Line);
 
 			while (getline(MyFile, Line)) {
 
-				if (Clinet._AccountNumber == AccountNumber && Clinet._PinCode == PinCode) {
+				clsBankClient Client = _ConvertLineToClinetObject(Line);
+
+				if (Client._AccountNumber == AccountNumber && Client._PinCode == PinCode) {
 
 					MyFile.close();
-					return Clinet;
+					return Client;
 				}
-				vClinet.push_back(Clinet);
 			}
 
 			MyFile.close();
@@ -459,15 +458,21 @@ public:
 
 	//This backend of Transaction
 
-	void Deposit(double Amount) {
+	bool Deposit(double Amount) {
 
-		_AccountBalance += Amount;
-		Save();
+		if (Amount <= 0) {
+
+			return false;
+		}
+		else {
+			_AccountBalance += Amount;
+			Save();
+		}
 	}
 
 	bool Withdraw(double Amount) {
 
-		if (Amount > AccountBalance) {
+		if (Amount > AccountBalance || Amount <= 0) {
 
 			return false;
 		}
