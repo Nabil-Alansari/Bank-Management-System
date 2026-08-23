@@ -1,0 +1,30 @@
+# Visual Studio
+.vs/
+**/.vs/
+
+# Build folders
+Debug/
+Release/
+x64/
+x86/
+**/Debug/
+**/Release/
+**/x64/
+**/x86/
+
+# Visual Studio generated files
+*.user
+*.suo
+*.pdb
+*.obj
+*.ilk
+*.idb
+*.ipch
+*.tlog
+*.log
+*.exe
+*.recipe
+
+# Temporary files
+*.tmp
+*.temp
