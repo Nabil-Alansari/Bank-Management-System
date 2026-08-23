@@ -2,6 +2,20 @@
 
 A console-based Bank Management System developed in C++ as a practical project to apply Object-Oriented Programming (OOP), problem solving, file handling, and application design concepts.
 
+## Screenshots
+
+### Login Screen
+![Login Screen](screenshots/login-screen.png)
+
+### Main Menu
+![Main Menu](screenshots/main-menu.png)
+
+### Transactions
+![Transactions](screenshots/transactions.png)
+
+### Currency Exchange
+![Currency Exchange](screenshots/currency-exchange.png)
+
 ## Features
 
 - Client management
